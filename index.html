@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cargo Care Logistics Sdn Bhd - v14 Fixed Layout</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
   :root {
     --orange: #D4760A;
@@ -1340,13 +1341,31 @@
     color: var(--white);
   }
   @keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
   }
 
   /* Mobile hamburger */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
   .hamburger span { width: 24px; height: 2px; background: var(--black); transition: all 0.3s; }
+
+  /* Right-side nav group: menu links + staff email icon grouped together */
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+
+  /* Staff Email icon */
+  .staff-email-icon {
+    color: var(--black);
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+  }
+  .staff-email-icon:hover {
+    transform: scale(1.2) translateY(-2px);
+    color: #0EA5E9;
+    filter: drop-shadow(0 0 8px rgba(14,165,233,0.6));
+  }
 
   @media (max-width: 900px) {
     nav { padding: 0 20px; }
@@ -1379,7 +1398,6 @@
 body { background: #f9ece1; }
 nav { height: 74px; padding: 0 58px; border-bottom: 0; box-shadow: 0 1px 10px rgba(0,0,0,.06); }
 .nav-logo { font-size: 1.75rem; line-height: .85; }
-.nav-logo::after { content: 'LOGISTICS'; display:block; margin-top:9px; font-size:.46em; letter-spacing:.62em; color:#111; }
 .nav-links { gap: 44px; }
 .nav-links a { color:#111; font-size:.9rem; text-transform:none; letter-spacing:0; font-weight:700; }
 .nav-cta { display:none; }
@@ -1915,6 +1933,7 @@ nav { height: 74px; padding: 0 58px; border-bottom: 0; box-shadow: 0 1px 10px rg
       <div style="font-size:0.55rem;font-weight:700;letter-spacing:0.15em;color:#444;text-transform:uppercase;">Logistics Sdn Bhd</div>
     </div>
   </div>
+  <div class="nav-right">
   <ul class="nav-links">
     <li><a href="#about">About Us</a></li>
     <li><a href="#services">Services</a></li>
@@ -1922,8 +1941,12 @@ nav { height: 74px; padding: 0 58px; border-bottom: 0; box-shadow: 0 1px 10px rg
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get Quote</a>
+  <a href="https://webmail.cargocare.com.my/" target="_blank" rel="noopener noreferrer" class="staff-email-icon" title="Staff Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
+  </div>
   </div>
 </nav>
 
@@ -1935,8 +1958,10 @@ nav { height: 74px; padding: 0 58px; border-bottom: 0; box-shadow: 0 1px 10px rg
   </div>
   <div class="ticker-scroll">
     <div class="ticker">
-      ✈ Air Freight &nbsp;·&nbsp; 🚢 Sea Freight &nbsp;·&nbsp; 🚛 Road Freight &nbsp;·&nbsp; 🚪 Door to Door &nbsp;·&nbsp; 🚗 Car Shipment &nbsp;·&nbsp; ⛽ Oil &amp; Gas Logistics &nbsp;·&nbsp; 📦 Packaging &amp; Documentation &nbsp;·&nbsp;
-      ✈ Air Freight &nbsp;·&nbsp; 🚢 Sea Freight &nbsp;·&nbsp; 🚛 Road Freight &nbsp;·&nbsp; 🚪 Door to Door &nbsp;·&nbsp; 🚗 Car Shipment &nbsp;·&nbsp; ⛽ Oil &amp; Gas Logistics &nbsp;·&nbsp; 📦 Packaging &amp; Documentation &nbsp;·&nbsp;
+      📞 +603-8706 6332 &nbsp;&nbsp;·&nbsp;&nbsp; 📞 +603-8706 7331 &nbsp;&nbsp;·&nbsp;&nbsp; 📱 +60 18-399 6982 &nbsp;&nbsp;·&nbsp;&nbsp; ✉ inquiry@cargocare.com.my &nbsp;&nbsp;·&nbsp;&nbsp;
+      📞 +603-8706 6332 &nbsp;&nbsp;·&nbsp;&nbsp; 📞 +603-8706 7331 &nbsp;&nbsp;·&nbsp;&nbsp; 📱 +60 18-399 6982 &nbsp;&nbsp;·&nbsp;&nbsp; ✉ inquiry@cargocare.com.my &nbsp;&nbsp;·&nbsp;&nbsp;
+      📞 +603-8706 6332 &nbsp;&nbsp;·&nbsp;&nbsp; 📞 +603-8706 7331 &nbsp;&nbsp;·&nbsp;&nbsp; 📱 +60 18-399 6982 &nbsp;&nbsp;·&nbsp;&nbsp; ✉ inquiry@cargocare.com.my &nbsp;&nbsp;·&nbsp;&nbsp;
+      📞 +603-8706 6332 &nbsp;&nbsp;·&nbsp;&nbsp; 📞 +603-8706 7331 &nbsp;&nbsp;·&nbsp;&nbsp; 📱 +60 18-399 6982 &nbsp;&nbsp;·&nbsp;&nbsp; ✉ inquiry@cargocare.com.my &nbsp;&nbsp;·&nbsp;&nbsp;
     </div>
   </div>
 </div>
@@ -2037,7 +2062,7 @@ nav { height: 74px; padding: 0 58px; border-bottom: 0; box-shadow: 0 1px 10px rg
         </div>
         <!-- RIGHT: Text only -->
         <div class="about-text-col" style="padding-top: 80px;">
-          <p class="about-lead about-anim" style="color: #ffffff;">Cargo Care Logistics Sdn Bhd has been in the Logistics &amp; Forwarding industry for <strong>16+ years</strong>. We handle Cargo Shipment (Land / Air / Sea), Courier, Packaging, Moving and Loyalty Courier — including car importation from Japan, UK and other countries.</p>
+          <p class="about-lead about-anim" style="color: #ffffff;">Cargo Care Logistics Sdn Bhd has been in the Logistics &amp; Forwarding industry for <strong>20+ years</strong>. We handle Cargo Shipment (Land / Air / Sea), Courier, Packaging, Moving and Loyalty Courier — including car importation from Japan, UK and other countries.</p>
           <div class="roc-badge about-anim" style="margin-top: 24px; background: rgba(255,255,255,0.08); border: 1.5px solid rgba(212,118,10,0.3); color: rgba(255,255,255,0.85); border-radius: 4px; padding: 10px 18px; font-size: 0.8rem; font-weight: 600; display: inline-flex; gap: 14px; align-items: center; letter-spacing: 0.04em; box-shadow: none;">
             <span>ROC: <strong style="color: var(--orange);">726342-A</strong></span>
             <span style="color: rgba(212,118,10,0.4);">|</span>
@@ -2488,7 +2513,7 @@ nav { height: 74px; padding: 0 58px; border-bottom: 0; box-shadow: 0 1px 10px rg
             <h3>Registration</h3>
             <p>ROC Number: <strong style="color:var(--black)">726342-A</strong></p>
             <p>Agent Code: <strong style="color:var(--black)">WF 0651</strong></p>
-            <p style="margin-top:12px; font-size:0.8rem;">Established 2006 · 16+ Years in Logistics Industry</p>
+            <p style="margin-top:12px; font-size:0.8rem;">Established 2006 · 20+ Years in Logistics Industry</p>
           </div>
         </div>
       </div>
